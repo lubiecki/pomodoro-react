@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900')
 
 c_black =   #0C0F0A
-c_pink =    #FF206E
-c_yellow =  #FBFF12
-c_blue =    #41EAD4
 c_white =   #FFFFFF
+c_purple =    #75485E
+c_yellow =  #DFCC74
+c_blue =    #51A3A3
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+input[type=number]
+    -moz-appearance:textfield
+
 
 body
     display flex
@@ -20,13 +29,50 @@ body
     .wrapper
         font-size 50px
         font-weight 900
-    .settings
-        fill c_white
-        position absolute
-        right 40px
-        top 20px
-        transform scale(2)
-
-
-
-
+        display flex
+        justify-content center
+        align-items center
+        flex-direction column
+        .btn
+            display inline-block
+            background c_yellow
+            border-radius 5px
+            border none
+            color c_black
+            font-size 20px
+            font-weight 500
+            padding 8px 15px
+            transition 200ms ease
+            margin 0 10px
+            cursor pointer
+            &:hover
+                background c_blue
+                color c_white
+                transition 200ms ease
+            &:focus
+                outline none
+        .btn-clear
+            background c_purple
+            color c_white
+        .btn-small
+            font-size 14px
+            padding 6px 10px
+        .settings
+            font-size 20px
+            font-weight 500
+            margin-bottom 50px
+            label
+                input
+                    margin 0 5px
+                    background none
+                    border none 
+                    color c_white
+                    border 2px solid c_white
+                    padding 10px
+                    width 20px
+                    text-align center
+                    transition 200ms ease 
+                    &:focus
+                        outline none 
+                        border-color c_blue
+                        transition 200ms ease 
